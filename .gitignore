@@ -1,3 +1,5 @@
 icons/
 silver-map.json
-markers.js
+restaurants.js
+node_modules/
+.sass-cache/

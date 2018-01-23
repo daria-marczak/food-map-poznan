@@ -1,34 +1,48 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Eat well in Poznan</title>
-		<meta charset="UTF-8">
-		<link rel="stylesheet" type="text/css" href="style.min.css">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	</head>
-	<body>
-		<h1>What would you like to eat?</h1>
-		<div id="map"></div>
 
-		<div class="icons">
-			<button type="button" id="vegan"><img src="https://i.imgur.com/fss8noM.png" alt="vegan"></button>
-			<button type="button" id="asian"><img src="https://i.imgur.com/kvgDyqC.png" alt="asian"></button>
-			<button type="button" id="fastfood"><img src="https://i.imgur.com/SbwOUJF.png" alt="fastfood"></button>
-			<button type="button" id="dessert"><img src="https://i.imgur.com/z3KeNN3.png" alt="dessert"></button>
-			<button type="button" id="italian"><img src="https://i.imgur.com/Y8EH7GP.png" alt="italian"></button>
-			<button type="button" id="breakfast"><img src="https://i.imgur.com/fPmPt5O.png" alt="breakfast"></button>
-		</div>
+<head>
+	<title>Eat well in Poznan</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 
-		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtW7i_u-VHTIwuBcl1pBxymQ48UgtM-7w&callback=initMap"></script>
-		<script type="text/javascript" src="markers.js"></script>
-		<script type="text/javascript" src="google-map.js"></script>
+<body>
+	<h1>What would you like to eat?</h1>
+	<div id="map"></div>
 
+	<div class="icons">
+		<button type="button" onclick="filterMarkers('vegan')">
+			<img src="https://i.imgur.com/b4ML3Hh.png" alt="vegan">
+		</button>
+		<button type="button" onclick="filterMarkers('asian')">
+			<img src="https://i.imgur.com/OOJN7Rw.png" alt="asian">
+		</button>
+		<button type="button" onclick="filterMarkers('fastfood')">
+			<img src="https://i.imgur.com/cx8h49P.png" alt="fastfood">
+		</button>
+		<button type="button" onclick="filterMarkers('dessert')">
+			<img src="https://i.imgur.com/NdfWaDg.png" alt="dessert">
+		</button>
+		<button type="button" onclick="filterMarkers('italian')">
+			<img src="https://i.imgur.com/N3vhSjK.png" alt="italian">
+		</button>
+		<button type="button" onclick="filterMarkers('breakfast')">
+			<img src="https://i.imgur.com/qE2306E.png" alt="breakfast">
+		</button>
+		<button type="button" onclick="filterMarkers('')">
+			<img src="https://i.imgur.com/0MoBy60.png" alt="all">
+		</button>
+	</div>
 
+	<footer>
+		<p>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
+		</p>
+	</footer>
 
-		<footer>
-			<p>Icons made by <a href="https://www.flaticon.com/authors/smashicons">Smashicons</a> from <a href="www.flaticon.com">Flaticon</a></p>
-		</footer>
-	</body>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtW7i_u-VHTIwuBcl1pBxymQ48UgtM-7w&callback=initMap"></script>
+	<script type="text/javascript" src="google-map.js"></script>
+</body>
+
 </html>
-
-<!-- ATOM LIVE SERVER jas chen!-->
