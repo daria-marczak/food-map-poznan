@@ -1,5 +1,5 @@
 var restaurants = [
-  [ 
+  [
     "0",
     "Falla",
     52.41139813187784,
@@ -83,8 +83,8 @@ var restaurants = [
   [
     "9",
     "Food patrol",
-    52.410469,
-    16.935712999999964,
+    52.415774,
+    16.906656999999996,
     "Jeżyce",
     "Kościelna 38",
     "fastfood"
@@ -202,9 +202,12 @@ function initMap() {
 
     grestaurants.push(marker);
 
-    marker.addListener("click", function () {
+    marker.addListener("mouseover", function () {
       infowindow.setContent(content);
       infowindow.open(map, marker);
+    });
+    marker.addListener("mouseout", function () {
+      infowindow.close();
     });
   }
 }
@@ -214,6 +217,7 @@ function filterMarkers(category) {
     marker = grestaurants[i];
     if (marker.category == category || category.length == 0) {
       marker.setVisible(true);
+      marker.setAnimation(google.maps.Animation.DROP);
     } else {
       marker.setVisible(false);
     }

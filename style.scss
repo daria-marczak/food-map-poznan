@@ -42,3 +42,13 @@ footer {
 		color: $orange;
 	}
 }
+
+@media (max-width: 1200px) {
+	h1 {
+		font-size: 2.5rem;
+	}
+	.icons img {
+		width: 30px;
+		height: 30px;
+	}
+}
