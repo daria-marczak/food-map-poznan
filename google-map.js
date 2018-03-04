@@ -223,3 +223,7 @@ function filterMarkers(category) {
     }
   }
 }
+
+document.addEventListener("DOMContentLoaded", function() { 
+  initMap();
+});
